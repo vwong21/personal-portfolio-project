@@ -1,16 +1,19 @@
-body {
+html, body {
     font-family: $primary-font;
+    width: 100vw;
 }
-
 /*Home Page*/
 main {
     @include flex-column(space-between);
+    gap: 8rem;
+
     #intro {
         min-height: 65vh;
         background-color: $secondary-color;
         #intro-container {
-            @include flex-row(space-between );
-            width: 65%;
+            @include flex-row(space-between);
+            gap: 2rem;
+            width: 70%;
             height: 70vh;
             margin: 0 auto;
 
@@ -18,6 +21,7 @@ main {
                 width: 30rem;
                 height: 30rem;
                 position: relative;
+                bottom: 50px;
                 display: inline-block;
                 overflow: hidden;
                 border-radius: 50%;
@@ -33,21 +37,20 @@ main {
                 width: 30vw;
                 @include flex-column(space-between);
                 color: white;
+                position: relative;
+                bottom: 100px;
+                right: 50px;
                 
                 h2 {
                     font-size: $h2-font-size;
                     margin: 0;
                     margin-bottom: 1rem;
                 }
-
-            
-            }
-        
+            }   
         }
     }
     #about-me {
         margin: 0 auto;
-        margin-top: 8rem;
         @include flex-column(space-between);
         gap: 2rem;
         width: 70vw;
@@ -56,14 +59,13 @@ main {
             font-size: $h2-font-size;
             margin: 0;
         }
-
         p {
             width: 50%;
             font-size: 1.25rem;
             line-height: 2;
         }
-
         #learn-more {
+            font-size: 1.2rem;
             width: fit-content;
             padding: 15px;
             border-radius: 5px;
@@ -72,5 +74,173 @@ main {
             text-decoration: none;
         }
     }
+    #projects-display {
+        width: 70vw;
+        margin: 0 auto;
+
+        h2 {
+            font-size: $h2-font-size;
+        }
+        table {
+            border-spacing: 4rem;
+            padding: 1rem;
+            border-radius: 5px;
+            background-color: #D9D9D9;
+
+            td {
+                padding: 1rem;
+                width: 40%;
+                background-color: white;
+                border-radius: 5px;
+
+                img {
+                    max-width: 100%;
+                    height: auto;
+                    border-radius: 5px;
+                }
+            } 
+        }
+    }
 }
 
+@media screen and (max-width: 2000px) {
+    main {
+        #intro {
+            #intro-container {
+                figure {
+                    width: 25rem;
+                    height: 25rem;
+                }
+
+                #intro-text {
+                    width: 35vw;
+                }
+            }
+        }
+        #projects-display {
+            table {
+                border-spacing: 0.5rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    main {
+        #intro {
+            #intro-container {
+                width: 80%;
+
+                figure {
+                    width: 20rem;
+                    height: 20rem;
+                }
+
+                #intro-text {
+                    right: 0;
+
+                    h2 {
+                        font-size: $h2-font-size-medium;
+                    }
+                }
+            }
+        }
+        #about-me {
+            h2 {
+                font-size: $h2-font-size-medium;
+            }
+
+            p {
+                width: 80%;
+            }
+        }
+        #projects-display {
+            h2 {
+                font-size: $h2-font-size-medium;
+            }
+
+            table {
+                padding: 0;
+                border-spacing: 1rem;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1050px) {
+    main {
+        #intro {
+            #intro-container {
+                figure {
+                    width: 15rem;
+                    height: 15rem;
+                }
+
+                #intro-text {
+                    width: 40vw;
+                    right: 0;
+                    bottom: 50px;
+
+                    h2 {
+                        font-size: $h2-font-size-small;
+                    }
+                }
+            }
+        }
+        #about-me {
+            h2 {
+                font-size: $h2-font-size-small;
+            }
+
+            p {
+                width: 80%;
+                font-size: 1rem;
+            }
+
+            #learn-more {
+                font-size: 1rem;
+                padding: 10px;
+            }
+        }
+        #projects-display {
+            h2 {
+                font-size: $h2-font-size-small;
+            }
+
+            table {
+                border-spacing: 0.5rem;
+            }
+        }
+    }
+}
+@media screen and (max-width: 800px) {
+    main {
+        gap: 5rem;
+
+        #intro {
+            #intro-container {
+                figure {
+                    display: none;
+                }
+
+                #intro-text {
+                    width: 60vw;
+                    position: static;
+                }
+            }
+        }
+        #about-me {
+            p {
+                width: 100%;
+            }
+        }
+        #projects-display {
+            h2 {
+                font-size: $h2-font-size-small;
+            }
+
+            table {
+                border-spacing: 0.5rem;
+            }
+        }
+    }
+}

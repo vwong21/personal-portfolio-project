@@ -304,82 +304,6 @@ template {
   display: none;
 }
 
-body {
-  font-family: comfortaa;
-}
-
-/*Home Page*/
-main {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-}
-main #intro {
-  min-height: 65vh;
-  background-color: #2146C7;
-}
-main #intro #intro-container {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: space-between;
-  width: 65%;
-  height: 70vh;
-  margin: 0 auto;
-}
-main #intro #intro-container figure {
-  width: 30rem;
-  height: 30rem;
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-  border-radius: 50%;
-}
-main #intro #intro-container figure img {
-  max-width: 100%;
-  height: auto;
-  margin: 0;
-}
-main #intro #intro-container #intro-text {
-  width: 30vw;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  color: white;
-}
-main #intro #intro-container #intro-text h2 {
-  font-size: 3rem;
-  margin: 0;
-  margin-bottom: 1rem;
-}
-main #about-me {
-  margin: 0 auto;
-  margin-top: 8rem;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  gap: 2rem;
-  width: 70vw;
-}
-main #about-me h2 {
-  font-size: 3rem;
-  margin: 0;
-}
-main #about-me p {
-  width: 50%;
-  font-size: 1.25rem;
-  line-height: 2;
-}
-main #about-me #learn-more {
-  width: fit-content;
-  padding: 15px;
-  border-radius: 5px;
-  background-color: #E6CBA8;
-  color: white;
-  text-decoration: none;
-  text-align: center;
-}
-
 header {
   background-color: #2146C7;
 }
@@ -397,7 +321,7 @@ header #header-container h1 {
   color: white;
 }
 header #header-container nav ul {
-  width: 30rem;
+  max-width: 30rem;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -412,7 +336,279 @@ header #header-container nav ul a {
   font-size: 1.2rem;
 }
 header #header-container nav ul a:hover {
-  background-color: white;
+  background-color: #E6CBA8;
   color: #2146C7;
   transition-duration: 0.5s;
+}
+
+@media screen and (max-width: 1050px) {
+  header #header-container {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 850px) {
+  header #header-container h1 {
+    display: none;
+  }
+  header #header-container nav {
+    padding-bottom: 2rem;
+  }
+  header #header-container nav ul a {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  header #header-container nav {
+    margin: 0 auto;
+    max-width: fit-content;
+  }
+  header #header-container nav ul a {
+    font-size: 0.75rem;
+  }
+}
+html, body {
+  font-family: comfortaa;
+  width: 100vw;
+}
+
+/*Home Page*/
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  gap: 8rem;
+}
+main #intro {
+  min-height: 65vh;
+  background-color: #2146C7;
+}
+main #intro #intro-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 70%;
+  height: 70vh;
+  margin: 0 auto;
+}
+main #intro #intro-container figure {
+  width: 30rem;
+  height: 30rem;
+  position: relative;
+  bottom: 50px;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 50%;
+}
+main #intro #intro-container figure img {
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+main #intro #intro-container #intro-text {
+  width: 30vw;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  color: white;
+  position: relative;
+  bottom: 100px;
+  right: 50px;
+}
+main #intro #intro-container #intro-text h2 {
+  font-size: 3rem;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+main #about-me {
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 70vw;
+}
+main #about-me h2 {
+  font-size: 3rem;
+  margin: 0;
+}
+main #about-me p {
+  width: 50%;
+  font-size: 1.25rem;
+  line-height: 2;
+}
+main #about-me #learn-more {
+  font-size: 1.2rem;
+  width: fit-content;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #E6CBA8;
+  color: white;
+  text-decoration: none;
+}
+main #projects-display {
+  width: 70vw;
+  margin: 0 auto;
+}
+main #projects-display h2 {
+  font-size: 3rem;
+}
+main #projects-display table {
+  border-spacing: 4rem;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: #D9D9D9;
+}
+main #projects-display table td {
+  padding: 1rem;
+  width: 40%;
+  background-color: white;
+  border-radius: 5px;
+}
+main #projects-display table td img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 2000px) {
+  main #intro #intro-container figure {
+    width: 25rem;
+    height: 25rem;
+  }
+  main #intro #intro-container #intro-text {
+    width: 35vw;
+  }
+  main #projects-display table {
+    border-spacing: 0.5rem;
+  }
+}
+@media screen and (max-width: 1500px) {
+  main #intro #intro-container {
+    width: 80%;
+  }
+  main #intro #intro-container figure {
+    width: 20rem;
+    height: 20rem;
+  }
+  main #intro #intro-container #intro-text {
+    right: 0;
+  }
+  main #intro #intro-container #intro-text h2 {
+    font-size: 2rem;
+  }
+  main #about-me h2 {
+    font-size: 2rem;
+  }
+  main #about-me p {
+    width: 80%;
+  }
+  main #projects-display h2 {
+    font-size: 2rem;
+  }
+  main #projects-display table {
+    padding: 0;
+    border-spacing: 1rem;
+  }
+}
+@media screen and (max-width: 1050px) {
+  main #intro #intro-container figure {
+    width: 15rem;
+    height: 15rem;
+  }
+  main #intro #intro-container #intro-text {
+    width: 40vw;
+    right: 0;
+    bottom: 50px;
+  }
+  main #intro #intro-container #intro-text h2 {
+    font-size: 1.5rem;
+  }
+  main #about-me h2 {
+    font-size: 1.5rem;
+  }
+  main #about-me p {
+    width: 80%;
+    font-size: 1rem;
+  }
+  main #about-me #learn-more {
+    font-size: 1rem;
+    padding: 10px;
+  }
+  main #projects-display h2 {
+    font-size: 1.5rem;
+  }
+  main #projects-display table {
+    border-spacing: 0.5rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  main {
+    gap: 5rem;
+  }
+  main #intro #intro-container figure {
+    display: none;
+  }
+  main #intro #intro-container #intro-text {
+    width: 60vw;
+    position: static;
+  }
+  main #about-me p {
+    width: 100%;
+  }
+  main #projects-display h2 {
+    font-size: 1.5rem;
+  }
+  main #projects-display table {
+    border-spacing: 0.5rem;
+  }
+}
+footer {
+  margin-top: 8rem;
+  background-color: black;
+}
+footer #footer-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  margin: 0 auto;
+  color: white;
+  padding: 2rem;
+  align-items: center;
+}
+footer #footer-container ul {
+  list-style: none;
+  line-height: 2;
+  padding: 0;
+}
+footer #footer-container ul a {
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (max-width: 1200px) {
+  footer {
+    margin-top: 5rem;
+  }
+  footer #footer-container {
+    width: 80%;
+  }
+  footer #footer-container li {
+    font-size: 0.75rem;
+    overflow-wrap: break-word;
+  }
+}
+@media screen and (max-width: 700px) {
+  footer #footer-container {
+    width: 90%;
+  }
+  footer #footer-container h2 {
+    font-size: 0.75rem;
+  }
+  footer #footer-container li {
+    font-size: 0.5rem;
+  }
 }

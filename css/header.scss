@@ -15,7 +15,7 @@ header {
         nav {
             
             ul {
-                width: 30rem;
+                max-width: 30rem;
                 @include flex-row(space-between);
                 list-style: none;
 
@@ -28,9 +28,52 @@ header {
                 }
 
                 a:hover {
-                    background-color: white;
+                    background-color: $accent-color;
                     color: $secondary-color;
                     transition-duration: 0.5s;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1050px){
+    header {
+        #header-container {
+            width: 100%;
+        }
+    }    
+}
+
+@media screen and (max-width: 850px){
+    header {
+        #header-container {
+            h1 {
+                display: none;
+            }
+            nav {
+                padding-bottom: 2rem;
+                ul {
+                    a {
+                    font-size: 1rem;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+@media screen and (max-width: 600px){
+    header {
+        #header-container {
+            
+            nav {
+                margin: 0 auto;
+                max-width: fit-content;
+                ul {
+                    a {
+                        font-size: 0.75rem; 
+                    }
                 }
             }
         }
