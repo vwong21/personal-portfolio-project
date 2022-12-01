@@ -1,0 +1,38 @@
+header {
+    background-color: $secondary-color;
+
+    #header-container {
+        width: 80%;
+        margin: 0 auto;
+        @include flex-row(space-between);
+
+        h1 {
+            margin: 0;
+            padding: 2rem;
+            color: white;
+        }
+
+        nav {
+            
+            ul {
+                width: 30rem;
+                @include flex-row(space-between);
+                list-style: none;
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                    padding: 1rem;
+                    border-radius: 30px;
+                    font-size: 1.2rem;
+                }
+
+                a:hover {
+                    background-color: white;
+                    color: $secondary-color;
+                    transition-duration: 0.5s;
+                }
+            }
+        }
+    }
+}

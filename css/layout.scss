@@ -1,0 +1,76 @@
+body {
+    font-family: $primary-font;
+}
+
+/*Home Page*/
+main {
+    @include flex-column(space-between);
+    #intro {
+        min-height: 65vh;
+        background-color: $secondary-color;
+        #intro-container {
+            @include flex-row(space-between );
+            width: 65%;
+            height: 70vh;
+            margin: 0 auto;
+
+            figure{
+                width: 30rem;
+                height: 30rem;
+                position: relative;
+                display: inline-block;
+                overflow: hidden;
+                border-radius: 50%;
+
+                img {
+                    max-width: 100%;
+                    height: auto;
+                    margin: 0;
+
+                }
+            }
+            #intro-text {
+                width: 30vw;
+                @include flex-column(space-between);
+                color: white;
+                
+                h2 {
+                    font-size: $h2-font-size;
+                    margin: 0;
+                    margin-bottom: 1rem;
+                }
+
+            
+            }
+        
+        }
+    }
+    #about-me {
+        margin: 0 auto;
+        margin-top: 8rem;
+        @include flex-column(space-between);
+        gap: 2rem;
+        width: 70vw;
+
+        h2 {
+            font-size: $h2-font-size;
+            margin: 0;
+        }
+
+        p {
+            width: 50%;
+            font-size: 1.25rem;
+            line-height: 2;
+        }
+
+        #learn-more {
+            width: fit-content;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: $accent-color;
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
+
