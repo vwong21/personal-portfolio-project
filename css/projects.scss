@@ -1,0 +1,45 @@
+#projects-main {
+    width: 65vw;
+    margin: 0 auto;
+    margin-top: 5rem;
+
+    h2 {
+        margin-bottom: 3rem;
+        padding-left: 2rem;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+#projects-container {
+    @include flex-column(space-between);
+    gap: 2rem;
+    padding: 10px;
+    border: 1px #eeeeee solid;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    .project {
+        @include flex-column(space-between);
+        width: 90%;
+        margin: 0 auto;
+
+        figcaption {
+            line-height: 2;
+        }
+    }
+}
+
+@media screen and (max-width: 650px){
+    #projects-main {
+        width: 100vw;
+    }
+
+    #projects-container {
+        border: none;
+        box-shadow: none;
+    }
+}
