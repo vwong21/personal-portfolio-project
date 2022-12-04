@@ -1,0 +1,19 @@
+#resume-main {
+    margin: 0 auto;
+    margin-top: 3rem;
+    @include flex-column(space-between);
+    gap: 1rem;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        margin: 0;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #resume-main {
+        width: 85vw;
+    }
+}

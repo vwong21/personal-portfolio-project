@@ -3,7 +3,21 @@
     margin: 0 auto;
     margin-top: 5rem;
 
+    h2 {
+        margin: 0;
+    }
+
     p {
         line-height: 2;
+    }
+
+    #see-resume-button{
+            font-size: 1.2rem;
+            width: fit-content;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: $accent-color;
+            color: white;
+            text-decoration: none;
     }
 }
