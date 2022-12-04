@@ -1,0 +1,33 @@
+h2 {
+    width: 55%;
+    margin: 2rem auto;
+    margin-top: 3rem;
+}
+
+.projects-container {
+    width: 50%;
+    margin: 0 auto;
+    @include flex-column(center);
+    align-items: center;
+    gap: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 50px;
+
+    figure {
+        @include flex-column(space-between);
+        gap: 1rem;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        figcaption {
+            line-height: 1.5;
+        }
+    }
+}
+

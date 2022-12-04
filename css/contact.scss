@@ -23,6 +23,19 @@ form {
     }
 }
 
+button {
+    border: none;
+    border-radius: 30px;
+    background-color: $accent-color;
+    padding: 15px;
+    width: 50%;
+    cursor: pointer;
+}
+
+button:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
 @media screen and (max-width: 1000px){
     #contact-main {
         width: 70vw;

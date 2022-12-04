@@ -583,7 +583,7 @@ body {
 }
 #projects-main h2 {
   margin-bottom: 3rem;
-  padding-left: 2rem;
+  text-align: center;
 }
 #projects-main img {
   max-width: 100%;
@@ -646,6 +646,19 @@ form {
   padding: 15px;
 }
 
+button {
+  border: none;
+  border-radius: 30px;
+  background-color: #E6CBA8;
+  padding: 15px;
+  width: 50%;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
 @media screen and (max-width: 1000px) {
   #contact-main {
     width: 70vw;
@@ -659,9 +672,43 @@ form {
     width: 60%;
   }
 }
+h2 {
+  width: 55%;
+  margin: 2rem auto;
+  margin-top: 3rem;
+}
+
+.projects-container {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 50px;
+}
+.projects-container figure {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+}
+.projects-container figure img {
+  max-width: 100%;
+  height: auto;
+}
+.projects-container figure figcaption {
+  line-height: 1.5;
+}
+
 footer {
   margin-top: 8rem;
-  background-color: black;
+  background-color: #252525;
 }
 footer #footer-container {
   display: flex;
@@ -676,7 +723,7 @@ footer #footer-container {
 }
 footer #footer-container ul {
   list-style: none;
-  line-height: 2;
+  line-height: 1.5;
   padding: 0;
 }
 footer #footer-container a {
