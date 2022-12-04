@@ -366,6 +366,15 @@ header #header-container nav ul a:hover {
     font-size: 0.75rem;
   }
 }
+.show {
+  opacity: 1;
+  transition: opacity 2s ease;
+}
+
+.hidden {
+  opacity: 0;
+}
+
 body {
   font-family: comfortaa;
   max-width: 100vw;
